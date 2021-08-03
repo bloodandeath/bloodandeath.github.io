@@ -16,6 +16,16 @@ body {
   height: auto;
 }
 
+#navigationsection {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 3px;
+  background-color: #33333350
+}
+
 #bannersection {
   position: relative;
   display: table;
@@ -33,16 +43,18 @@ body {
   padding: 0 3%;
 }
 
-.center {
-  text-align: center;
-}
-
-#title {
-  color: Lime;
-  text-align: center;
+#aboutsection {
+  position: relative;
+  display: table;
+  width: 80%;
+  height: 100vh;
 }
 
 p {
   font-size: 20px;
   
+}
+
+a {
+  text-decoration: none;
 }
