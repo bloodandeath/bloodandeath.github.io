@@ -18,12 +18,22 @@ body {
 
 #navigationsection {
   position: fixed;
-  display: block;
+  display: table;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 3px;
-  background-color: #33333350
+  height: 10vh;
+  background-color: #33333350;
+}
+
+.navigationcontent {
+  display: table-cell;
+  vertical-align: right;
+  color: darkgreen;
+  text-align: center;
+  font-size: 18px;
+  font-weight: normal;
+  padding: 0 3%;
 }
 
 #bannersection {
