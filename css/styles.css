@@ -4,6 +4,10 @@
   font-family: "Share Tech Mono", "Ubuntu Mono", monospaced;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #161616;
   background-image: url("../img/noise.png");
