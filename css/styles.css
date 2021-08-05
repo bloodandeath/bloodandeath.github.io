@@ -21,7 +21,8 @@ nav {
 nav ul {
   height: 50px;
   width: 300px;
-  margin-left: auto
+  margin-left: auto;
+  overflow: hidden;
 }
 
 nav ul li {
@@ -45,10 +46,33 @@ nav ul li a:hover {
 }
 
 @media screen and (max-width: 600px) {
-  nav {}
-  nav ul {}
-  nav ul li {float: none;}
-  nav ul li a {}
+  nav {
+    margin-left: auto;
+    right: 0;
+    width: 10vw;
+    padding-top: 10vw;
+    height: 0;
+  }
+  nav:hover {
+    padding: 0;
+  }
+  nav ul {
+    display: none;
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+  }
+  nav:hover ul {
+    display: block;
+  }
+  nav ul li {
+    float: none;
+    
+  }
+  nav ul li a {
+    background-color: rgba(33, 33, 33, 0.7);
+  }
 }
 
 
