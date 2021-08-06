@@ -1,22 +1,11 @@
-(function(){
-
-  var parallax = document.querySelectorAll("body"),
-      speed = 0.5;
-
-  window.onscroll = function(){
-    [].slice.call(parallax).forEach(function(el,i){
-
-      var windowYOffset = window.pageYOffset,
-          elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
-
-      el.style.backgroundPosition = elBackgrounPos;
-
-    });
-  };
-
-})();
-
 $(document).ready(function(){
+  
+  var mobileWidth = 600
+  
+  var menuList = document.getElementById("menuList");
+  var checkboxElem = document.getElementById("checkboxElem");
+
+  
   // Add smooth scrolling to all links
   $("a").on('click', function(event) {
 
@@ -39,4 +28,47 @@ $(document).ready(function(){
       });
     } // End if
   });
+  
+  // Parallax Background Scrolling
+  var parallax = document.querySelectorAll("body"),
+      speed = 0.5;
+
+  window.onscroll = function(){
+    [].slice.call(parallax).forEach(function(el,i){
+
+      var windowYOffset = window.pageYOffset,
+          elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+
+      el.style.backgroundPosition = elBackgrounPos;
+
+    });
+  }; // End Parallax
+  
+  window.onresize = function() {
+    if (window.innerWidth >= mobileWidth) {
+      menuList.style.display = "block";
+    } else {
+      menuList.style.display = "none";
+    }
+  }
+  
+  window.onclick = function(event) {
+    if (window.innerWidth <= mobileWidth && checkboxElem.checked && event.target != checkboxElem) {
+      menuList.style.display = "none";
+      checkboxElem.checked = false;
+    }
+    
+  }
+  
 });
+
+
+// Menu Button Actions (Show/Hide Menu)
+function menuClick(checkboxElem) {
+  var menuList = document.getElementById("menuList");
+  if (checkboxElem.checked) {
+    menuList.style.display = "block";
+  } else {
+    menuList.style.display = "none";
+  }
+}

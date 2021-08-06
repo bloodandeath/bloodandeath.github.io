@@ -16,6 +16,11 @@ nav {
   width: 100%;
   height: 50px;
   background-color: rgba(33, 33, 33, 0.7);
+  z-index: 1;
+}
+
+nav label {
+  display: none;
 }
 
 nav ul {
@@ -48,14 +53,76 @@ nav ul li a:hover {
 @media screen and (max-width: 600px) {
   nav {
     margin-left: auto;
-    right: 0;
+    top: 5px;
+    right: 5px;
     width: 10vw;
-    padding-top: 10vw;
     height: 0;
   }
-  nav:hover {
-    padding: 0;
+    
+  .menubox {
+    display: inline-flex;
+    cursor: pointer;
+    position: relative;
+    
   }
+  
+  .checkbox > span {
+    
+  }
+  
+  .menubox > input {
+    height: 10vw;
+    width: 10vw;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border: 1px solid rgba(33, 33, 33, 0.7);
+    border-radius: 4px;
+    outline: none;
+    transition-duration: 0.3s;
+    background-color: rgba(33, 33, 33, 0.7);
+    cursor: pointer;
+    }
+  
+  .menubox > input + span::before {
+    content: "";
+    display: inline-block;
+    background: url("../img/menubutton.png");
+    width: 10vw;
+    height: 10vw;
+    background-size: contain;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .menubox > input:checked {
+    border: 1px solid rgba(50, 50, 50, 0.7);
+    background-color: rgba(50, 50, 50, 0.7);
+  }
+  
+  .menubox > input:checked ul[class] {
+    border: 1px solid rgba(50, 50, 50, 0.7);
+    background-color: rgba(50, 50, 50, 0.7);
+  }
+  
+  .menubox > input:checked + span::before {
+    content: "";
+    display: inline-block;
+    background: url("../img/menubutton.png");
+    width: 10vw;
+    height: 10vw;
+    background-size: contain;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .menubox > input:active {
+    border: 2px solid #0f0;
+  }
+  
   nav ul {
     display: none;
     width: 150px;
@@ -63,17 +130,16 @@ nav ul li a:hover {
     position: absolute;
     right: 0;
   }
-  nav:hover ul {
-    display: block;
-  }
+  
   nav ul li {
     float: none;
-    
   }
+  
   nav ul li a {
     background-color: rgba(33, 33, 33, 0.7);
   }
 }
+
 
 
 #bannersection {
