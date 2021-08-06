@@ -3,6 +3,7 @@ $(document).ready(function(){
   var mobileWidth = 600
   
   var menuList = document.getElementById("menuList");
+  var checkboxWrapper = document.getElementById("checkboxWrapper");
   var checkboxElem = document.getElementById("checkboxElem");
 
   
@@ -58,9 +59,8 @@ $(document).ready(function(){
     
     if (window.innerWidth <= mobileWidth) {
       if (checkboxElem.checked && event.target != checkboxElem) {
-        checkboxElem.checked = false;
-        menuList.style.display = "none";
-      }
+        checkboxElem.click();
+      };
     };
   });
   
@@ -70,10 +70,13 @@ $(document).ready(function(){
 
 
 // Menu Button Actions (Show/Hide Menu)
+
 function menuClick(event) {
   if (checkboxElem.checked) {
+    checkboxWrapper.style.display = "none";
     menuList.style.display = "block";
   } else {
-    //menuList.style.display = "none";
+    menuList.style.display = "none";
+    checkboxWrapper.style.display = "block";
   };
 };
