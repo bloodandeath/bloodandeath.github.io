@@ -49,26 +49,31 @@ $(document).ready(function(){
       menuList.style.display = "block";
     } else {
       menuList.style.display = "none";
-    }
-  }
+    };
+  };
   
-  window.onclick = function(event) {
-    if (window.innerWidth <= mobileWidth && checkboxElem.checked && event.target != checkboxElem) {
-      menuList.style.display = "none";
-      checkboxElem.checked = false;
-    }
+  //Event Listener?
+  
+  $(document).mouseup(function (event) {
     
-  }
+    if (window.innerWidth <= mobileWidth) {
+      if (checkboxElem.checked && event.target != checkboxElem) {
+        checkboxElem.checked = false;
+        menuList.style.display = "none";
+      }
+    };
+  });
+  
+  
   
 });
 
 
 // Menu Button Actions (Show/Hide Menu)
-function menuClick(checkboxElem) {
-  var menuList = document.getElementById("menuList");
+function menuClick(event) {
   if (checkboxElem.checked) {
     menuList.style.display = "block";
   } else {
-    menuList.style.display = "none";
-  }
-}
+    //menuList.style.display = "none";
+  };
+};
