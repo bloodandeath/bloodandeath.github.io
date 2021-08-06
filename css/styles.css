@@ -55,7 +55,7 @@ nav ul li a:hover {
     margin-left: auto;
     top: 5px;
     right: 5px;
-    width: 10vw;
+    width: 13vw;
     height: 0;
   }
     
@@ -71,8 +71,8 @@ nav ul li a:hover {
   }
   
   .menubox > input {
-    height: 10vw;
-    width: 10vw;
+    height: 13vw;
+    width: 13vw;
     -webkit-appearance: none;
     -moz-appearance: none;
     -o-appearance: none;
@@ -89,8 +89,8 @@ nav ul li a:hover {
     content: "";
     display: inline-block;
     background: url("../img/menubutton.png");
-    width: 10vw;
-    height: 10vw;
+    width: 13vw;
+    height: 13vw;
     background-size: contain;
     position: absolute;
     right: 0;
@@ -111,8 +111,8 @@ nav ul li a:hover {
     content: "";
     display: inline-block;
     background: url("../img/menubutton.png");
-    width: 10vw;
-    height: 10vw;
+    width: 13vw;
+    height: 13vw;
     background-size: contain;
     position: absolute;
     right: 0;
